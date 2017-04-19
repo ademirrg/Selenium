@@ -2,6 +2,7 @@ package adesao;
 import static org.junit.Assert.*;
 import org.junit.Test;
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -21,13 +22,20 @@ public class Adesao {
 	@Test
 	public void login(){
 		//Login
-		driver.manage().window().maximize();
-		driver.get("http://localhost:8080/sigms/");
-		WebElement usuario = driver.findElement(By.name("username"));
-		usuario.sendKeys("C899009");
-		WebElement senha = driver.findElement(By.name("password"));
-		senha.sendKeys("c899009");
-		senha.submit();
+		try{
+			driver.manage().window().maximize();
+			driver.get("http://localhost:8080/sigms/");
+			WebElement usuario = driver.findElement(By.name("username"));
+			usuario.sendKeys("C899009");
+			WebElement senha = driver.findElement(By.name("password"));
+			senha.sendKeys("c899009");
+			senha.submit();
+		}
+		catch(NoSuchElementException e){
+			System.out.println("Link informado não encontrado.");
+			driver.close();
+		}
+
 	}
 	
 	//Fecha navegador
@@ -132,7 +140,7 @@ public class Adesao {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-	
+		
 		//Resultado esperado
 		boolean consultaOk = driver.getPageSource().contains("Consulta de Adesão");
 		assertTrue(consultaOk);
