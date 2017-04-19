@@ -4,8 +4,8 @@ import gera.cpf.cnpj.GeradorCPFCNPJ;
 
 public class ProcessaDadosDeEntrada {
 	static GeradorCPFCNPJ pegaCpfCnpj = new GeradorCPFCNPJ();
-	static String insereCpf = pegaCpfCnpj.getCPF();
-	static String insereCnpj = pegaCpfCnpj.getCNPJ();
+	static String cpf = pegaCpfCnpj.getCPF();
+	static String cnpj = pegaCpfCnpj.getCNPJ();
 	AdesaoVO adesao = new AdesaoVO();
 	
 	public void adesaoInclusaoSidecOP001PFComSucesso(){
@@ -13,7 +13,7 @@ public class ProcessaDadosDeEntrada {
 		String operacao = "1";
 		String agencia = "0239";
 		String conta = "416";
-		String cpfCnpj = insereCpf;
+		String cpfCnpj = cpf;
 		String horaInicio = "0000";
 		String horaFinal = "2359";
 		String ddd = "11";
@@ -36,7 +36,7 @@ public class ProcessaDadosDeEntrada {
 	
 	public void adesaoAlteracaoSidecOP001PFComSucesso(){
 		String indicadorCpfCnpj = "1";
-		String cpfCnpj = insereCpf;
+		String cpfCnpj = cpf;
 		String valorMinimoGpDebito = "500,00";
 		String valorMinimoCartaoDebito = "300,00";
 		
@@ -48,7 +48,7 @@ public class ProcessaDadosDeEntrada {
 	
 	public void adesaoConsultaSidecOP001PFComSucesso(){
 		String indicadorCpfCnpj = "1";
-		String cpfCnpj = insereCpf;
+		String cpfCnpj = cpf;
 		
 		AdesaoVO.setIndicadorCpfCnpj(indicadorCpfCnpj);
 		AdesaoVO.setCpfCnpj(cpfCnpj);
@@ -56,7 +56,7 @@ public class ProcessaDadosDeEntrada {
 	
 	public void adesaoExclusaoSidecOP001PFComSucesso(){
 		String indicadorCpfCnpj = "1";
-		String cpfCnpj = insereCpf;
+		String cpfCnpj = cpf;
 		
 		AdesaoVO.setIndicadorCpfCnpj(indicadorCpfCnpj);
 		AdesaoVO.setCpfCnpj(cpfCnpj);
@@ -67,7 +67,7 @@ public class ProcessaDadosDeEntrada {
 		String operacao = "3";
 		String agencia = "0239";
 		String conta = "416";
-		String cpfCnpj = insereCnpj;
+		String cpfCnpj = cnpj;
 		String horaInicio = "0000";
 		String horaFinal = "2359";
 		String ddd = "11";
@@ -90,7 +90,7 @@ public class ProcessaDadosDeEntrada {
 	
 	public void adesaoAlteracaoSidecOP003PJComSucesso(){
 		String indicadorCpfCnpj = "2";
-		String cpfCnpj = insereCnpj;
+		String cpfCnpj = cnpj;
 		String valorMinimoGpDebito = "500,00";
 		String valorMinimoCartaoDebito = "300,00";
 		
@@ -102,7 +102,7 @@ public class ProcessaDadosDeEntrada {
 	
 	public void adesaoConsultaSidecOP003PJComSucesso(){
 		String indicadorCpfCnpj = "2";
-		String cpfCnpj = insereCnpj;
+		String cpfCnpj = cnpj;
 		
 		AdesaoVO.setIndicadorCpfCnpj(indicadorCpfCnpj);
 		AdesaoVO.setCpfCnpj(cpfCnpj);
@@ -110,7 +110,7 @@ public class ProcessaDadosDeEntrada {
 	
 	public void adesaoExclusaoSidecOP003PJComSucesso(){
 		String indicadorCpfCnpj = "2";
-		String cpfCnpj = insereCnpj;
+		String cpfCnpj = cnpj;
 		
 		AdesaoVO.setIndicadorCpfCnpj(indicadorCpfCnpj);
 		AdesaoVO.setCpfCnpj(cpfCnpj);
@@ -121,7 +121,7 @@ public class ProcessaDadosDeEntrada {
 		String operacao = "3701";
 		String agencia = "0612";
 		String conta = "0009990612035";
-		String cpfCnpj = insereCpf;
+		String cpfCnpj = cpf;
 		String horaInicio = "0000";
 		String horaFinal = "2359";
 		String ddd = "11";
@@ -144,7 +144,7 @@ public class ProcessaDadosDeEntrada {
 	
 	public void adesaoAlteracaoNsgdOP3701PFComSucesso(){
 		String indicadorCpfCnpj = "1";
-		String cpfCnpj = insereCpf;
+		String cpfCnpj = cpf;
 		String valorMinimoGpDebito = "500,00";
 		String valorMinimoCartaoDebito = "300,00";
 		
@@ -156,7 +156,7 @@ public class ProcessaDadosDeEntrada {
 	
 	public void adesaoConsultaNsgdOP3701PFComSucesso(){
 		String indicadorCpfCnpj = "1";
-		String cpfCnpj = insereCpf;
+		String cpfCnpj = cpf;
 		
 		AdesaoVO.setIndicadorCpfCnpj(indicadorCpfCnpj);
 		AdesaoVO.setCpfCnpj(cpfCnpj);
@@ -164,7 +164,7 @@ public class ProcessaDadosDeEntrada {
 	
 	public void adesaoExclusaoNsgdOP3701PFComSucesso(){
 		String indicadorCpfCnpj = "1";
-		String cpfCnpj = insereCpf;
+		String cpfCnpj = cpf;
 		
 		AdesaoVO.setIndicadorCpfCnpj(indicadorCpfCnpj);
 		AdesaoVO.setCpfCnpj(cpfCnpj);
@@ -175,7 +175,7 @@ public class ProcessaDadosDeEntrada {
 		String operacao = "3702";
 		String agencia = "0612";
 		String conta = "0009990612035";
-		String cpfCnpj = insereCnpj;
+		String cpfCnpj = cnpj;
 		String horaInicio = "0000";
 		String horaFinal = "2359";
 		String ddd = "11";
@@ -198,7 +198,7 @@ public class ProcessaDadosDeEntrada {
 	
 	public void adesaoAlteracaoNsgdOP3702PJComSucesso(){
 		String indicadorCpfCnpj = "2";
-		String cpfCnpj = insereCnpj;
+		String cpfCnpj = cnpj;
 		String valorMinimoGpDebito = "500,00";
 		String valorMinimoCartaoDebito = "300,00";
 		
@@ -210,7 +210,7 @@ public class ProcessaDadosDeEntrada {
 	
 	public void adesaoConsultaNsgdOP3702PJComSucesso(){
 		String indicadorCpfCnpj = "2";
-		String cpfCnpj = insereCnpj;
+		String cpfCnpj = cnpj;
 		
 		AdesaoVO.setIndicadorCpfCnpj(indicadorCpfCnpj);
 		AdesaoVO.setCpfCnpj(cpfCnpj);
@@ -218,7 +218,7 @@ public class ProcessaDadosDeEntrada {
 	
 	public void adesaoExclusaoNsgdOP3702PJComSucesso(){
 		String indicadorCpfCnpj = "2";
-		String cpfCnpj = insereCnpj;
+		String cpfCnpj = cnpj;
 		
 		AdesaoVO.setIndicadorCpfCnpj(indicadorCpfCnpj);
 		AdesaoVO.setCpfCnpj(cpfCnpj);
