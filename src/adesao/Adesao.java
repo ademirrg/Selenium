@@ -25,6 +25,7 @@ public class Adesao {
 		try{
 			driver.manage().window().maximize();
 			driver.get("http://localhost:8080/sigms/");
+			//driver.get("https://sigms-novo.des.coresp.caixa/sigms/");
 			WebElement usuario = driver.findElement(By.name("username"));
 			usuario.sendKeys("C899009");
 			WebElement senha = driver.findElement(By.name("password"));
@@ -35,6 +36,11 @@ public class Adesao {
 			System.out.println("Link informado não encontrado.");
 			driver.close();
 		}
+		
+		//Resultado esperado
+		boolean loginOk = driver.getPageSource().contains("Operador:");
+		assertTrue(loginOk);
+		//driver.quit();
 
 	}
 	
