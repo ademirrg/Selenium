@@ -37,6 +37,7 @@ public class Tela extends JFrame implements ActionListener {
 		switch (e.getActionCommand()) {
 		
 		case "command_adesao_sidec_pf":
+			adesao.abreBrowser();
 			adesao.login();
 			adesao.inclusaoSidecOP001PFComSucesso();
 			adesao.alteracaoSidecOP001PFComSucesso();
@@ -45,6 +46,7 @@ public class Tela extends JFrame implements ActionListener {
 			adesao.fechaBrowser();
 			break;
 		case "command_adesao_sidec_pj":
+			adesao.abreBrowser();
 			adesao.login();
 			adesao.inclusaoSidecOP003PJComSucesso();
 			adesao.alteracaoSidecOP003PJComSucesso();
@@ -56,6 +58,7 @@ public class Tela extends JFrame implements ActionListener {
 
 			break;
 		case "command_adesao_nsgd_pf":
+			adesao.abreBrowser();
 			adesao.login();
 			adesao.inclusaoNsgdOP3701PFComSucesso();
 			adesao.alteracaoNsgdOP3701PFComSucesso();
@@ -64,6 +67,7 @@ public class Tela extends JFrame implements ActionListener {
 			adesao.fechaBrowser();
 			break;
 		case "command_adesao_nsgd_pj":
+			adesao.abreBrowser();
 			adesao.login();
 			adesao.inclusaoNsgdOP3702PJComSucesso();
 			adesao.alteracaoNsgdOP3702PJComSucesso();

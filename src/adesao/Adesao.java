@@ -15,17 +15,24 @@ public class Adesao {
 	static String insereCpf = pegaCpfCnpj.getCPF();
 	static String insereCnpj = pegaCpfCnpj.getCNPJ();
 	
-	//Abre navegador
-	WebDriver driver =	new ChromeDriver();
-	//WebDriver driver =	new FirefoxDriver();
+	WebDriver driver;
+	
+	public void abreBrowser(){
+		driver = new ChromeDriver();
+		driver.manage().window().maximize();
+//		driver = new FirefoxDriver();
+//		driver.manage().window().maximize();
+	}
 	
 	@Test
 	public void login(){
-		//Login
-		try{
-			driver.manage().window().maximize();
+		try{		
+			//LOCAL
 			driver.get("http://localhost:8080/sigms/");
-			//driver.get("https://sigms-novo.des.coresp.caixa/sigms/");
+			
+			//DES
+//			driver.get("https://sigms-novo.des.coresp.caixa/sigms/");
+			
 			WebElement usuario = driver.findElement(By.name("username"));
 			usuario.sendKeys("C899009");
 			WebElement senha = driver.findElement(By.name("password"));
@@ -44,14 +51,12 @@ public class Adesao {
 
 	}
 	
-	//Fecha navegador
 	public void fechaBrowser(){
 		driver.quit();
 	}
 	
 	@Test
 	public void inclusaoSidecOP001PFComSucesso() {
-		//Inclusão SIDEC OP001 PF com sucesso
 		try {		
 			driver.findElement(By.xpath("//*[@id=\"menu_mobile\"]/ul[1]/li[2]/a")).click();
 			driver.findElement(By.xpath("//*[@id=\"menu_mobile\"]/ul[1]/li[2]/ul/li[1]/a")).click();
@@ -96,7 +101,6 @@ public class Adesao {
 	
 	@Test
 	public void alteracaoSidecOP001PFComSucesso() {
-		//Alteração SIDEC OP001 PF com sucesso
 		try {
 			driver.findElement(By.xpath("//*[@id=\"menu_mobile\"]/ul[1]/li[2]/a")).click();
 			driver.findElement(By.xpath("//*[@id=\"menu_mobile\"]/ul[1]/li[2]/ul/li[2]/a")).click();
@@ -129,7 +133,6 @@ public class Adesao {
 	
 	@Test
 	public void consultaSidecOP001PFComSucesso() {
-		//Consulta SIDEC OP001 PF com sucesso
 		try {
 			driver.findElement(By.xpath("//*[@id=\"menu_mobile\"]/ul[1]/li[2]/a")).click();
 			driver.findElement(By.xpath("//*[@id=\"menu_mobile\"]/ul[1]/li[2]/ul/li[2]/a")).click();
@@ -155,7 +158,6 @@ public class Adesao {
 	
 	@Test
 	public void exclusaoSidecOP001PFComSucesso() {
-		//Exclusão SIDEC OP001 PF com sucesso
 		try {
 			driver.findElement(By.xpath("//*[@id=\"menu_mobile\"]/ul[1]/li[2]/a")).click();
 			driver.findElement(By.xpath("//*[@id=\"menu_mobile\"]/ul[1]/li[2]/ul/li[2]/a")).click();
@@ -184,7 +186,6 @@ public class Adesao {
 	
 	@Test
 	public void inclusaoSidecOP003PJComSucesso() {
-		//Inclusão SIDEC OP003 PJ com sucesso
 		try {
 			driver.findElement(By.xpath("//*[@id=\"menu_mobile\"]/ul[1]/li[2]/a")).click();
 			driver.findElement(By.xpath("//*[@id=\"menu_mobile\"]/ul[1]/li[2]/ul/li[1]/a")).click();
@@ -229,7 +230,6 @@ public class Adesao {
 	
 	@Test
 	public void alteracaoSidecOP003PJComSucesso() {
-		//Alteração SIDEC OP003 PJ com sucesso
 		try {
 			driver.findElement(By.xpath("//*[@id=\"menu_mobile\"]/ul[1]/li[2]/a")).click();
 			driver.findElement(By.xpath("//*[@id=\"menu_mobile\"]/ul[1]/li[2]/ul/li[2]/a")).click();
@@ -262,7 +262,6 @@ public class Adesao {
 	
 	@Test
 	public void consultaSidecOP003PJComSucesso() {
-		//Consulta SIDEC OP003 PJ com sucesso
 		try {
 			driver.findElement(By.xpath("//*[@id=\"menu_mobile\"]/ul[1]/li[2]/a")).click();
 			driver.findElement(By.xpath("//*[@id=\"menu_mobile\"]/ul[1]/li[2]/ul/li[2]/a")).click();
@@ -288,7 +287,6 @@ public class Adesao {
 	
 	@Test
 	public void exclusaoSidecOP003PJComSucesso() {
-		//Exclusão SIDEC OP003 PJ com sucesso
 		try {
 			driver.findElement(By.xpath("//*[@id=\"menu_mobile\"]/ul[1]/li[2]/a")).click();
 			driver.findElement(By.xpath("//*[@id=\"menu_mobile\"]/ul[1]/li[2]/ul/li[2]/a")).click();
@@ -317,7 +315,6 @@ public class Adesao {
 	
 	@Test
 	public void inclusaoNsgdOP3701PFComSucesso() {
-		//Inclusão NSGD OP3701 PF com sucesso
 		try {
 			driver.findElement(By.xpath("//*[@id=\"menu_mobile\"]/ul[1]/li[2]/a")).click();
 			driver.findElement(By.xpath("//*[@id=\"menu_mobile\"]/ul[1]/li[2]/ul/li[1]/a")).click();
@@ -362,7 +359,6 @@ public class Adesao {
 	
 	@Test
 	public void alteracaoNsgdOP3701PFComSucesso() {
-		//Alteração NSGD OP3701 PF com sucesso
 		try {
 			driver.findElement(By.xpath("//*[@id=\"menu_mobile\"]/ul[1]/li[2]/a")).click();
 			driver.findElement(By.xpath("//*[@id=\"menu_mobile\"]/ul[1]/li[2]/ul/li[2]/a")).click();
@@ -395,7 +391,6 @@ public class Adesao {
 	
 	@Test
 	public void consultaNsgdOP3701PFComSucesso() {
-		//Consulta NSGD OP3701 PF com sucesso
 		try {
 			driver.findElement(By.xpath("//*[@id=\"menu_mobile\"]/ul[1]/li[2]/a")).click();
 			driver.findElement(By.xpath("//*[@id=\"menu_mobile\"]/ul[1]/li[2]/ul/li[2]/a")).click();
@@ -421,7 +416,6 @@ public class Adesao {
 	
 	@Test
 	public void exclusaoNsgdOP3701PFComSucesso() {
-		//Exclusão NSGD OP3701 PF com sucesso
 		try {
 			driver.findElement(By.xpath("//*[@id=\"menu_mobile\"]/ul[1]/li[2]/a")).click();
 			driver.findElement(By.xpath("//*[@id=\"menu_mobile\"]/ul[1]/li[2]/ul/li[2]/a")).click();
@@ -450,7 +444,6 @@ public class Adesao {
 	
 	@Test
 	public void inclusaoNsgdOP3702PJComSucesso() {
-		//Inclusão NSGD OP3702 PJ com sucesso
 		try {
 			
 			driver.findElement(By.xpath("//*[@id=\"menu_mobile\"]/ul[1]/li[2]/a")).click();
@@ -496,7 +489,6 @@ public class Adesao {
 	
 	@Test
 	public void alteracaoNsgdOP3702PJComSucesso() {
-		//Alteração NSGD OP3702 PJ com sucesso
 		try {
 			driver.findElement(By.xpath("//*[@id=\"menu_mobile\"]/ul[1]/li[2]/a")).click();
 			driver.findElement(By.xpath("//*[@id=\"menu_mobile\"]/ul[1]/li[2]/ul/li[2]/a")).click();
@@ -529,7 +521,6 @@ public class Adesao {
 	
 	@Test
 	public void consultaNsgdOP3702PJComSucesso() {
-		//Consulta NSGD OP3702 PJ com sucesso
 		try {
 			driver.findElement(By.xpath("//*[@id=\"menu_mobile\"]/ul[1]/li[2]/a")).click();
 			driver.findElement(By.xpath("//*[@id=\"menu_mobile\"]/ul[1]/li[2]/ul/li[2]/a")).click();
@@ -555,7 +546,6 @@ public class Adesao {
 	
 	@Test
 	public void exclusaoNsgdOP3702PJComSucesso() {
-		//Exclusão NSGD OP3702 PJ com sucesso
 		try {
 			driver.findElement(By.xpath("//*[@id=\"menu_mobile\"]/ul[1]/li[2]/a")).click();
 			driver.findElement(By.xpath("//*[@id=\"menu_mobile\"]/ul[1]/li[2]/ul/li[2]/a")).click();
