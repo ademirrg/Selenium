@@ -35,6 +35,7 @@ public class Botao {
 		bt_inclusao_adesao_sidec_nextel.setBounds(20, 120, x, 30);
 		bt_inclusao_adesao_sidec_nextel.addActionListener(tela);
 		bt_inclusao_adesao_sidec_nextel.setActionCommand("command_adesao_sidec_nextel");
+		bt_inclusao_adesao_sidec_nextel.setEnabled(false);
 		
 		bt_inclusao_adesao_nsgd_pf = new JButton("Adesão NSGD PF");
 		bt_inclusao_adesao_nsgd_pf.setBounds(20, 160, x, 30);
@@ -50,6 +51,7 @@ public class Botao {
 		bt_inclusao_adesao_nsgd_nextel.setBounds(20, 240, x, 30);
 		bt_inclusao_adesao_nsgd_nextel.addActionListener(tela);
 		bt_inclusao_adesao_nsgd_nextel.setActionCommand("command_adesao_nsgd_nextel");
+		bt_inclusao_adesao_nsgd_nextel.setEnabled(false);
 		
 		//frame.add(bt_sair);
 		frame.add(bt_inclusao_adesao_sidec_pf);
@@ -58,6 +60,7 @@ public class Botao {
 		frame.add(bt_inclusao_adesao_nsgd_pf);
 		frame.add(bt_inclusao_adesao_nsgd_pj);
 		frame.add(bt_inclusao_adesao_nsgd_nextel);
+		frame.add(bt_sair);
 	}
 
 }

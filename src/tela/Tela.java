@@ -4,11 +4,14 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.*;
 import adesao.Adesao;
+import adesao.ProcessaDadosDeEntrada;
 
 public class Tela extends JFrame implements ActionListener {
 
 	private static final long serialVersionUID = 1L;
 	Botao botoes = new Botao();
+	ProcessaDadosDeEntrada dados = new ProcessaDadosDeEntrada();
+	Adesao adesao = new Adesao();
 	
 	public void criaTela() {
 
@@ -33,25 +36,35 @@ public class Tela extends JFrame implements ActionListener {
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		Adesao adesao = new Adesao();
 		switch (e.getActionCommand()) {
 		
+		case "command_sair":
+			System.exit(0);
+			break;
 		case "command_adesao_sidec_pf":
 			adesao.abreBrowser();
 			adesao.login();
-			adesao.inclusaoSidecOP001PFComSucesso();
-			adesao.alteracaoSidecOP001PFComSucesso();
-			adesao.consultaSidecOP001PFComSucesso();
-			adesao.exclusaoSidecOP001PFComSucesso();
+			dados.adesaoInclusaoSidecOP001PFComSucesso();
+			adesao.inclusao();
+			dados.adesaoAlteracaoSidecOP001PFComSucesso();
+			adesao.alteracao();
+			dados.adesaoConsultaSidecOP001PFComSucesso();
+			adesao.consulta();
+			dados.adesaoExclusaoSidecOP001PFComSucesso();
+			adesao.exclusao();
 			adesao.fechaBrowser();
 			break;
 		case "command_adesao_sidec_pj":
 			adesao.abreBrowser();
 			adesao.login();
-			adesao.inclusaoSidecOP003PJComSucesso();
-			adesao.alteracaoSidecOP003PJComSucesso();
-			adesao.consultaSidecOP003PJComSucesso();
-			adesao.exclusaoSidecOP003PJComSucesso();
+			dados.adesaoInclusaoSidecOP003PJComSucesso();
+			adesao.inclusao();
+			dados.adesaoAlteracaoSidecOP003PJComSucesso();
+			adesao.alteracao();
+			dados.adesaoConsultaSidecOP003PJComSucesso();
+			adesao.consulta();
+			dados.adesaoExclusaoSidecOP003PJComSucesso();
+			adesao.exclusao();
 			adesao.fechaBrowser();
 			break;
 		case "command_adesao_sidec_nextel":
@@ -60,19 +73,27 @@ public class Tela extends JFrame implements ActionListener {
 		case "command_adesao_nsgd_pf":
 			adesao.abreBrowser();
 			adesao.login();
-			adesao.inclusaoNsgdOP3701PFComSucesso();
-			adesao.alteracaoNsgdOP3701PFComSucesso();
-			adesao.consultaNsgdOP3701PFComSucesso();
-			adesao.exclusaoNsgdOP3701PFComSucesso();
+			dados.adesaoInclusaoNsgdOP3701PFComSucesso();
+			adesao.inclusao();
+			dados.adesaoAlteracaoNsgdOP3701PFComSucesso();
+			adesao.alteracao();
+			dados.adesaoConsultaNsgdOP3701PFComSucesso();
+			adesao.consulta();
+			dados.adesaoExclusaoNsgdOP3701PFComSucesso();
+			adesao.exclusao();
 			adesao.fechaBrowser();
 			break;
 		case "command_adesao_nsgd_pj":
 			adesao.abreBrowser();
 			adesao.login();
-			adesao.inclusaoNsgdOP3702PJComSucesso();
-			adesao.alteracaoNsgdOP3702PJComSucesso();
-			adesao.consultaNsgdOP3702PJComSucesso();
-			adesao.exclusaoNsgdOP3702PJComSucesso();
+			dados.adesaoInclusaoNsgdOP3702PJComSucesso();
+			adesao.inclusao();
+			dados.adesaoAlteracaoNsgdOP3702PJComSucesso();
+			adesao.alteracao();
+			dados.adesaoConsultaNsgdOP3702PJComSucesso();
+			adesao.consulta();
+			dados.adesaoExclusaoNsgdOP3702PJComSucesso();
+			adesao.exclusao();
 			adesao.fechaBrowser();
 			break;
 		case "command_adesao_nsgd_nextel":
