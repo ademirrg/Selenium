@@ -11,6 +11,7 @@ public class Botao {
 	JButton bt_inclusao_adesao_nsgd_pf;
 	JButton bt_inclusao_adesao_nsgd_pj;
 	JButton bt_inclusao_adesao_nsgd_nextel;
+	JButton bt_teste_google;
 	JButton bt_sair;
 	
 	int x = 165;//Comprimento do botão
@@ -53,6 +54,11 @@ public class Botao {
 		bt_inclusao_adesao_nsgd_nextel.setActionCommand("command_adesao_nsgd_nextel");
 		bt_inclusao_adesao_nsgd_nextel.setEnabled(false);
 		
+		bt_teste_google = new JButton("Teste Google");
+		bt_teste_google.setBounds(20, 280, x, 30);
+		bt_teste_google.addActionListener(tela);
+		bt_teste_google.setActionCommand("command_teste_google");
+		
 		//frame.add(bt_sair);
 		frame.add(bt_inclusao_adesao_sidec_pf);
 		frame.add(bt_inclusao_adesao_sidec_pj);
@@ -60,6 +66,7 @@ public class Botao {
 		frame.add(bt_inclusao_adesao_nsgd_pf);
 		frame.add(bt_inclusao_adesao_nsgd_pj);
 		frame.add(bt_inclusao_adesao_nsgd_nextel);
+		frame.add(bt_teste_google);
 		frame.add(bt_sair);
 	}
 

@@ -3,8 +3,10 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.*;
+import org.sikuli.script.FindFailed;
 import adesao.Adesao;
 import adesao.ProcessaDadosDeEntrada;
+import teste.TesteGoogle;
 
 public class Tela extends JFrame implements ActionListener {
 
@@ -99,6 +101,19 @@ public class Tela extends JFrame implements ActionListener {
 		case "command_adesao_nsgd_nextel":
 			
 			break;
+		case "command_teste_google":
+			try {
+				TesteGoogle google = new TesteGoogle();
+				google.abreBrowser();
+				google.pesquisaGoogle();
+				//google.abreFlash();
+				//google.fechaBrowser();
+			} catch (FindFailed e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+			}
+			break;
+			
 		}
 		
 	}
