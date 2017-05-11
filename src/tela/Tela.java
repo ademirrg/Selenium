@@ -106,7 +106,6 @@ public class Tela extends JFrame implements ActionListener {
 				TesteGoogle google = new TesteGoogle();
 				google.abreBrowser();
 				google.pesquisaGoogle();
-				//google.abreFlash();
 				//google.fechaBrowser();
 			} catch (FindFailed e1) {
 				// TODO Auto-generated catch block
