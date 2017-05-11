@@ -9,8 +9,7 @@ import org.sikuli.script.Screen;
 
 public class TesteGoogle {
 	WebDriver driver;
-	
-	
+
 	public void abreBrowser(){
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
