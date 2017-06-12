@@ -1,0 +1,2 @@
+Colocar o arquivo "chromedriver.exe" em C: ou utitlizar um parâmetro de configuração para informar o destino desejado do driver.
+System.setProperty("webdriver.chrome.driver", "/path/to/chromedriver");
