@@ -1,6 +1,8 @@
 package tela;
 
 import java.awt.event.ActionListener;
+import java.awt.event.KeyEvent;
+
 import javax.swing.JButton;
 import javax.swing.JFrame;
 
@@ -21,6 +23,7 @@ public class Botao {
 		bt_sair.setBounds(600, 430, 75, 30);
 		bt_sair.addActionListener(tela);
 		bt_sair.setActionCommand("command_sair");
+		bt_sair.setMnemonic(KeyEvent.VK_Q);
 
 		bt_inclusao_adesao_sidec_pf = new JButton("Adesão SIDEC PF");
 		bt_inclusao_adesao_sidec_pf.setBounds(20, 40, x, 30);
